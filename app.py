@@ -76,7 +76,7 @@ def tv_shows():
 def dog_breeds():
     response = requests.get("https://dog.ceo/api/breeds/list/all")
     parsed_content = json.loads(response.content)
-    return render_template('dogs.html', doggos = response.content)
+    return render_template('dogs.html', doggos =parsed_content)
 
 
 
